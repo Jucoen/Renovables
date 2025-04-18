@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e74ec783-1432-412e-a0ce-ae70dbbb4ee4" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerConfigs">
+    <option name="configs">
+      <option value="$PROJECT_DIR$/EX2_juanmiguel_cortes/composer.json" />
+      <option value="$PROJECT_DIR$/EX3_juanmiguel_cortes/composer.json" />
+    </option>
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/Api_Proyecto/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\php\php.exe">
+    <include_path>
+      <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/composer" />
+      <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/symfony/flex" />
+      <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/symfony/polyfill-php83" />
+      <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/symfony/runtime" />
+      <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/runtime" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/clock" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/polyfill-php83" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/form" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/sql-formatter" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/security-http" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/security-core" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/password-hasher" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/twig-bundle" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/flex" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/security-csrf" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/twig-bridge" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/security-bundle" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/composer" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/psr/clock" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/nelmio/cors-bundle" />
+    </include_path>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2sysRetVh7WQII0oloY7S7orXic" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker..docker: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/ProyectoJuanMiguel&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\jmcoe\\OneDrive\\Escritorio\\ProyectoJuanMiguel\\ProyectoFront\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;redis&quot;,
+      &quot;mariadb&quot;
+    ]
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name=".docker: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value=".docker/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker..docker: Compose Deployment" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-PS-243.22562.233" />
+        <option value="bundled-php-predefined-a98d8de5180a-7980c7aaca61-com.jetbrains.php.sharedIndexes-PS-243.22562.233" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e74ec783-1432-412e-a0ce-ae70dbbb4ee4" name="Changes" comment="" />
+      <created>1739439141325</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1739439141325</updated>
+      <workItem from="1739439142497" duration="1902000" />
+      <workItem from="1739564704553" duration="1379000" />
+      <workItem from="1739573810689" duration="674000" />
+      <workItem from="1739606126713" duration="1573000" />
+      <workItem from="1744137302262" duration="7523000" />
+      <workItem from="1744219050637" duration="4592000" />
+      <workItem from="1744300279977" duration="314000" />
+      <workItem from="1744300796494" duration="1723000" />
+      <workItem from="1744302659852" duration="479000" />
+      <workItem from="1744303734032" duration="301000" />
+      <workItem from="1744974762457" duration="4178000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
