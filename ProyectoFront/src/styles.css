@@ -78,3 +78,12 @@
   cursor: default !important;
   background-color: inherit !important;
 }
+
+canvas {
+  max-width: 600px;
+  max-height: 300px;
+  margin: auto;
+  display: block;
+  width: 100% !important;
+  height: 250px !important; /* Asegura que tenga un alto visible */
+}

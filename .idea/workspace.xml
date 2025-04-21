@@ -5,33 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e74ec783-1432-412e-a0ce-ae70dbbb4ee4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.db_mysql/ddl_recovery.log" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/ddl_recovery.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.db_mysql/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/ib_logfile0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFront/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/angular.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProyectoFront/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProyectoFront/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/src/app/app.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/components/HomeComponent/home-component.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/components/HomeComponent/home-component.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/components/HomeComponent/home-component.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/components/HomeComponent/home-component.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/components/eolica/eolica.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/components/eolica/eolica.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/components/eolica/eolica.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/components/eolica/eolica.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/components/fvcomponent/fotovoltaica-component.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/components/fvcomponent/fotovoltaica-component.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/components/fvcomponent/fotovoltaica-component.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/components/fvcomponent/fotovoltaica-component.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/components/fvcomponent/fvcomponent.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/components/fvcomponent/fvcomponent.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/components/fvcomponent/fvcomponent.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/components/fvcomponent/fvcomponent.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/components/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/src/app/components/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/views/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/src/app/views/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/views/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/src/app/views/home/home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/views/home/fvcomponent/fvcomponent.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/src/app/views/home/fvcomponent/fvcomponent.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/views/home/fvcomponent/fvcomponent.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/src/app/views/home/fvcomponent/fvcomponent.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProyectoFront/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFront/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +210,7 @@
       <workItem from="1744303734032" duration="301000" />
       <workItem from="1744974762457" duration="5401000" />
       <workItem from="1745145780737" duration="11612000" />
-      <workItem from="1745234162381" duration="5059000" />
+      <workItem from="1745234162381" duration="6210000" />
     </task>
     <servers />
   </component>
