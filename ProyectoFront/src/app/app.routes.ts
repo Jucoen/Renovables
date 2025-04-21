@@ -1,7 +1,8 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './views/home/home.component';
-import { FVComponentComponent } from './components/fvcomponent/fvcomponent.component';
-import { EolicaComponent } from './components/eolica/eolica.component';
+import { FVComponentComponent } from './views/home/fvcomponent/fvcomponent.component';
+import { EolicaComponent } from './views/home/eolica/eolica.component';
+
 
 export const routes: Routes = [
   {path: 'home', component: HomeComponent},

@@ -10,15 +10,4 @@ import { DataService } from '../../services/data.service';
 export class HomeComponent {
 
 
-  constructor(public service: DataService){}
-
-  public getResponse(): void {
-    this.service.getResponse().subscribe((response: any) => {
-      console.log(response);
-    })
-  }
-
-  public ngOnInit():void{
-    this.getResponse();
-  }
 }
