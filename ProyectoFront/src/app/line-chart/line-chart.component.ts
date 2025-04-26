@@ -52,40 +52,62 @@ export class LineChartComponent implements OnInit, OnChanges {
           {
             label: 'Ahorro acumulado (€)',
             data: rentabilidad,
-            fill: false,
-            borderColor: 'rgb(75,192,192)',
-            tension: 0.1
+            fill: true,
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: 'rgb(75, 192, 192)',
+            borderWidth: 2,
+            pointRadius: 0, /* Sin puntitos grandes */
+            tension: 0.3
           },
           {
             label: 'Inversión inicial (€)',
             data: years.map(() => this.inversionTotal),
             borderDash: [5, 5],
-            borderColor: 'rgb(255,99,132)',
+            borderColor: 'rgb(255, 99, 132)',
+            borderWidth: 2,
             fill: false,
+            pointRadius: 0
           }
         ]
       },
       options: {
         responsive: true,
+        maintainAspectRatio: false, /* Mejor en móviles */
         scales: {
           y: {
             beginAtZero: true,
             title: {
               display: true,
-              text: '€'
+              text: '€',
+              font: {
+                size: 14
+              }
             }
           },
           x: {
             title: {
               display: true,
-              text: 'Años'
+              text: 'Años',
+              font: {
+                size: 14
+              }
             }
           }
         },
         plugins: {
           title: {
             display: true,
-            text: 'Rentabilidad acumulada vs Inversión (con desgaste)'
+            text: 'Rentabilidad a lo largo de los años',
+            font: {
+              size: 18
+            }
+          },
+          legend: {
+            labels: {
+              font: {
+                size: 14
+              }
+            }
           }
         }
       }

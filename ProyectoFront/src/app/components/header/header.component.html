@@ -1,9 +1,15 @@
+<div class="jumbotron-custom">
+  <div class="container text-center">
+    <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><img class="header-logo" src="assets/logo.png" class="logo"/></a> 
+  </div>
+</div>
+
 <nav class="navbar">
-    <div class="nav-container">
-      <ul class="nav-links">
-        <li><a href="#">Inicio</a></li>
-        <li><a href="/fotovoltaica">Calcular fotovoltaica</a></li>
-        <li><a href="/eolica">Calcular eólica</a></li>
-      </ul>
-    </div>
-  </nav>
+  <div class="nav-container">
+    <ul class="nav-links">
+
+      <li><a routerLink="/fotovoltaica" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Calcular fotovoltaica</a></li>
+      <li><a routerLink="/eolica" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Calcular eólica</a></li>
+    </ul>
+  </div>
+</nav>

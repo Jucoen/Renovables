@@ -14,28 +14,28 @@ export class FVComponentComponent {
 
   panelesDisponibles = [
     {
+      nombre: 'Panel Alta Eficiencia 550W',
+      potencia: 550,
+      precio: 290,  
+      imagen: 'assets/ImagenesFV/PanelAE550w.jpg'
+    },
+    {
       nombre: 'Panel Monocristalino 330W',
       potencia: 330,
       precio: 190,  
-      imagen: 'https://www.wccsolar.net/wp-content/uploads/nc/media/c805a9_8a961ada518c42a3b16471a936a2e9bemv2.jpg/v1/fit/w_1000h_1000q_90/file.jpg'
-    },
-    {
-      nombre: 'Panel Policristalino 400W',
-      potencia: 400,
-      precio: 220, 
-      imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrmec8obZkY_zHLvzG24-H0kZXsgocITN5ug&s'
+      imagen: 'assets/ImagenesFV/PanelMono330w.jpeg'
     },
     {
       nombre: 'Panel Monocristalino 450W',
       potencia: 450,
       precio: 250,  
-      imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6v2rB25mq3t7Oi8oTeLWGjqR1FszY0JtQBw&s'
+      imagen: 'assets/ImagenesFV/PanelMono450w.jpg'
     },
     {
-      nombre: 'Panel Alta Eficiencia 550W',
-      potencia: 550,
-      precio: 290,  // Precio real aproximado
-      imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPT4r0HqHkiDEgGFNLl-J5gooPXuxZpYSicw&s'
+      nombre: 'Panel Policristalino 400W',
+      potencia: 400,
+      precio: 220,  
+      imagen: 'assets/ImagenesFV/PanelPoli400W.jpg'
     },
   ];
   panelSeleccionadoIndex: number = 0; 

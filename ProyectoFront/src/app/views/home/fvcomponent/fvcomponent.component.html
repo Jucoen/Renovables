@@ -27,18 +27,18 @@
 
   <div class="row justify-content-center mt-5">
     <div class="col-md-10">
-      <div class="card p-4 card-no-hover">
+      <div class="card p-4 card-no-hover CardsOperaciones">
         <div class="row align-items-center">
           <P><b>En este panel no se realiza ninguna compra</b>, simplemente, hacemos una estimación de la inversión que se haría para realizar los cálculos</P>
   
           <div class="col-md-6 text-center">
           
             <img 
-              [src]="panelesDisponibles[panelSeleccionadoIndex].imagen" 
-              [alt]="panelesDisponibles[panelSeleccionadoIndex].nombre"
-              class="img-fluid rounded"
-              style="min-height: 350px;"
-            >
+            [src]="panelesDisponibles[panelSeleccionadoIndex].imagen" 
+            [alt]="panelesDisponibles[panelSeleccionadoIndex].nombre"
+            class="img-fluid rounded"
+            style="width: 250px; height: 250px; object-fit: cover;"
+          >
           </div>
   
             <div class="col-md-6">
@@ -57,10 +57,11 @@
   
             <p><strong>Total:</strong> {{ panelesDisponibles[panelSeleccionadoIndex].precio * cantidad | number:'1.0-0' }} €</p>
   
-            <button class="btn btn-primary" (click)="calcularEnergia()">Calcular Rentabilidad</button>
-            <div *ngIf="!ubicacionSeleccionada" style="color: red;">
-              <p><strong>¡Por favor, seleccione la comunidad autónoma!</strong></p>
-            </div>
+      
+<!-- Mientras esté cargando -->
+  <div *ngIf="cargando" class="text-center my-3">
+   <p><strong>Cargando... mientras tanto, puedes ir eligiendo los paneles</strong></p>
+  </div>
           </div>
   
         </div>
@@ -82,13 +83,13 @@
 
   <div *ngIf="!cargando" class="row justify-content-center mt-5">
     <div class="col-md-10">
-      <div class="card p-4 card-no-hover">
+      <div class="card p-4 card-no-hover CardsOperaciones">
         <div class="row align-items-center">
   
           <p><b>En este panel no se realiza ninguna compra</b>, simplemente, hacemos una estimación de la inversión que se haría para realizar los cálculos</p>
           
           <!-- GRÁFICO -->
-          <div class="col-md-6 text-center">
+          <div class="col-md-6 text-center CardsOperaciones">
             <div class="chart-wrapper">
               <app-line-chart 
                 [inversionTotal]="inversionCalculada" 
@@ -101,7 +102,7 @@
           <div class="col-md-6">
   
             <!-- Formulario -->
-            <div class="info-card">
+            <div class="info-card CardsOperaciones">
               <form (ngSubmit)="calcularEnergia()" #panelForm="ngForm" class="info-card-form">
                 <h2>Selecciona tu ubicación</h2>
   
@@ -122,7 +123,7 @@
             </div>
   
             <!-- Resultados -->
-            <div class="info-card" *ngIf="mostrarResultados">
+            <div class="info-card CardsOperaciones" *ngIf="mostrarResultados">
               <h2>Cálculo de energía generada</h2>
               <p><strong>Potencia del panel:</strong> {{ potenciaPanelW }} W</p>
               <p><strong>Ubicación seleccionada:</strong> {{ ubicacionSeleccionada }}</p>
