@@ -4,7 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e74ec783-1432-412e-a0ce-ae70dbbb4ee4" name="Changes" comment="" />
+    <list default="true" id="e74ec783-1432-412e-a0ce-ae70dbbb4ee4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.db_mysql/app_api_bbdd/doctrine_migration_versions.frm" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/app_api_bbdd/doctrine_migration_versions.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.db_mysql/app_api_bbdd/doctrine_migration_versions.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/app_api_bbdd/doctrine_migration_versions.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.db_mysql/app_api_bbdd/wind_speed.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.db_mysql/app_api_bbdd/wind_speed.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.db_mysql/ddl_recovery.log" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/ddl_recovery.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.db_mysql/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/ib_logfile0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/eac5780d-c378-48fd-ab4e-3ee317015ae4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/eac5780d-c378-48fd-ab4e-3ee317015ae4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api_Proyecto/.env" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Proyecto/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api_Proyecto/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Proyecto/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api_Proyecto/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Proyecto/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api_Proyecto/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Proyecto/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api_Proyecto/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Proyecto/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api_Proyecto/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Proyecto/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api_Proyecto/migrations/Version20250408210404.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api_Proyecto/src/Entity/WindSpeed.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api_Proyecto/src/Repository/WindSpeedRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api_Proyecto/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Proyecto/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/src/app/app.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/components/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/src/app/components/header/header.component.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,10 +36,11 @@
     <option name="configs">
       <option value="$PROJECT_DIR$/EX2_juanmiguel_cortes/composer.json" />
       <option value="$PROJECT_DIR$/EX3_juanmiguel_cortes/composer.json" />
+      <option value="$PROJECT_DIR$/Api_Proyecto/composer.json" />
     </option>
   </component>
   <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
-    <pharConfigPath>$PROJECT_DIR$/Api_Proyecto/composer.json</pharConfigPath>
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="Git.Settings">
@@ -57,75 +80,116 @@
       <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/symfony/yaml" />
       <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/symfony/var-exporter" />
       <path value="$PROJECT_DIR$/EX1_juanmiguel_cortes/vendor/symfony/var-dumper" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/cache-contracts" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/cache" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/dbal" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/instantiator" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/event-manager" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/routing" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/persistence" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/runtime" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/collections" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/finder" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/doctrine-bundle" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/clock" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/orm" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/doctrine-bridge" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/doctrine-migrations-bundle" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/polyfill-php83" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/migrations" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/cache" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/inflector" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/form" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/sql-formatter" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/dependency-injection" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/var-exporter" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/polyfill-intl-normalizer" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/polyfill-intl-grapheme" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/security-http" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/twig/twig" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/event-dispatcher-contracts" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/config" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/security-core" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/filesystem" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/error-handler" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/property-info" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/property-access" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/maker-bundle" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/console" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/password-hasher" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/twig-bundle" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/options-resolver" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/flex" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/stopwatch" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/security-csrf" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/framework-bundle" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/http-foundation" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/var-dumper" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/event-dispatcher" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/polyfill-intl-icu" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/validator" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/translation-contracts" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/http-kernel" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/yaml" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/twig-bridge" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/string" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/service-contracts" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/process" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/dotenv" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/security-bundle" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/deprecation-contracts" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/polyfill-mbstring" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/composer" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/nikic/php-parser" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/psr/cache" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/psr/event-dispatcher" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/psr/clock" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-csrf" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-http" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/password-hasher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/type-info" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/vendor/lexik/jwt-authentication-bundle" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/stella-maris/clock" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/vendor/namshi/jose" />
+      <path value="$PROJECT_DIR$/vendor/psr/clock" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-core" />
+      <path value="$PROJECT_DIR$/vendor/lcobucci/clock" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php83" />
+      <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/symfony/clock" />
       <path value="$PROJECT_DIR$/Api_Proyecto/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/psr/clock" />
       <path value="$PROJECT_DIR$/Api_Proyecto/vendor/psr/log" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/deprecations" />
-      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/clock" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/cache" />
       <path value="$PROJECT_DIR$/Api_Proyecto/vendor/nelmio/cors-bundle" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/flex" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/form" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/polyfill-php83" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/password-hasher" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/security-csrf" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/security-core" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/security-http" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/security-bundle" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/runtime" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/twig-bundle" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/twig-bridge" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/sql-formatter" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/composer" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/lexik/jwt-authentication-bundle" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/lcobucci/clock" />
+      <path value="$PROJECT_DIR$/Api_Proyecto/vendor/lcobucci/jwt" />
     </include_path>
   </component>
   <component name="ProjectColorInfo">{
@@ -205,7 +269,8 @@
       <workItem from="1745234162381" duration="6812000" />
       <workItem from="1745431882126" duration="5896000" />
       <workItem from="1745680499246" duration="6284000" />
-      <workItem from="1745831574640" duration="823000" />
+      <workItem from="1745831574640" duration="1429000" />
+      <workItem from="1745858363689" duration="7722000" />
     </task>
     <servers />
   </component>

@@ -1278,7 +1278,7 @@
       <Charset>utf8mb4</Charset>
     </collation>
     <schema id="510" parent="1" name="app_api_bbdd">
-      <LastIntrospectionLocalTimestamp>2025-04-20.17:12:03</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-04-28.21:01:02</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_uca1400_ai_ci</CollationName>
     </schema>
     <schema id="511" parent="1" name="information_schema">
@@ -1317,12 +1317,12 @@
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb3_unicode_ci</CollationName>
     </table>
-    <table id="523" parent="510" name="wind_speed">
+    <table id="523" parent="510" name="user">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
     <column id="524" parent="521" name="id">
-      <AutoIncrement>2</AutoIncrement>
+      <AutoIncrement>35</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
@@ -1375,21 +1375,50 @@
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="535" parent="523" name="id">
+    <check id="535" parent="523" name="roles">
+      <ColNames>roles</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Predicate>json_valid(`roles`)</Predicate>
+    </check>
+    <column id="536" parent="523" name="id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <index id="536" parent="523" name="PRIMARY">
+    <column id="537" parent="523" name="email">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(180)|0s</StoredType>
+    </column>
+    <column id="538" parent="523" name="roles">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>longtext|0s</StoredType>
+      <CollationName>utf8mb4_bin</CollationName>
+    </column>
+    <column id="539" parent="523" name="password">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <index id="540" parent="523" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="537" parent="523" name="PRIMARY">
+    <index id="541" parent="523" name="UNIQ_IDENTIFIER_EMAIL">
+      <ColNames>email</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="542" parent="523" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="543" parent="523" name="UNIQ_IDENTIFIER_EMAIL">
+      <UnderlyingIndexName>UNIQ_IDENTIFIER_EMAIL</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>
