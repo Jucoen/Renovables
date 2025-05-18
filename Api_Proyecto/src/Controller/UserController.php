@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
+use Symfony\Component\HttpFoundation\Response;
 
 #[Route('/api/users')]
 class UserController extends AbstractController
@@ -52,23 +53,42 @@ class UserController extends AbstractController
     #[Route('', name: 'api_users_create', methods: ['POST'])]
     public function create(Request $request, EntityManagerInterface $entityManager, UserPasswordHasherInterface $passwordHasher): JsonResponse
     {
-        $data = json_decode($request->getContent(), true);
+        try {
+            $data = json_decode($request->getContent(), true);
 
-        $user = new User();
-        $user->setEmail($data['email']);
+            if (empty($data['email']) || empty($data['password'])) {
+                return new JsonResponse(['message' => 'Email y contraseña son obligatorios'], Response::HTTP_BAD_REQUEST);
+            }
 
-        // Hashear la contraseña correctamente
-        $hashedPassword = $passwordHasher->hashPassword($user, $data['password']);
-        $user->setPassword($hashedPassword);
+            if (strlen($data['password']) <= 5) {
+                return new JsonResponse(['message' => 'La contraseña debe tener más de 5 caracteres'], Response::HTTP_BAD_REQUEST);
+            }
 
-        $entityManager->persist($user);
-        $entityManager->flush();
+            $existingUser = $entityManager->getRepository(User::class)->findOneBy(['email' => $data['email']]);
+            if ($existingUser) {
+                return new JsonResponse([
+                    'message' => 'El email ya está registrado'
+                ], Response::HTTP_CONFLICT);
+            }
 
-        return new JsonResponse([
-            'id' => $user->getId(),
-            'email' => $user->getEmail(),
-            'roles' => $user->getRoles()
-        ], JsonResponse::HTTP_CREATED);
+            $user = new User();
+            $user->setEmail($data['email']);
+
+            $hashedPassword = $passwordHasher->hashPassword($user, $data['password']);
+            $user->setPassword($hashedPassword);
+
+            $entityManager->persist($user);
+            $entityManager->flush();
+
+            return new JsonResponse([
+                'id' => $user->getId(),
+                'email' => $user->getEmail(),
+                'roles' => $user->getRoles()
+            ], Response::HTTP_CREATED);
+
+        } catch (Exception $e) {
+            return new JsonResponse(['message' => 'Error inesperado: ' . $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
+        }
     }
 
     // Actualizar un usuario

@@ -5,27 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e74ec783-1432-412e-a0ce-ae70dbbb4ee4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.db_mysql/app_api_bbdd/doctrine_migration_versions.frm" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/app_api_bbdd/doctrine_migration_versions.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.db_mysql/app_api_bbdd/datos.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/app_api_bbdd/datos.ibd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.db_mysql/app_api_bbdd/doctrine_migration_versions.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/app_api_bbdd/doctrine_migration_versions.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.db_mysql/app_api_bbdd/wind_speed.frm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.db_mysql/app_api_bbdd/wind_speed.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.db_mysql/app_api_bbdd/user.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/app_api_bbdd/user.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.db_mysql/aria_log.00000001" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/aria_log.00000001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.db_mysql/aria_log_control" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/aria_log_control" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.db_mysql/ddl_recovery.log" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/ddl_recovery.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.db_mysql/ib_buffer_pool" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/ib_buffer_pool" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.db_mysql/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/ib_logfile0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/eac5780d-c378-48fd-ab4e-3ee317015ae4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/eac5780d-c378-48fd-ab4e-3ee317015ae4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.db_mysql/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/ibdata1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.db_mysql/mysql/innodb_index_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/mysql/innodb_index_stats.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.db_mysql/mysql/innodb_table_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/mysql/innodb_table_stats.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.db_mysql/undo001" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/undo001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.db_mysql/undo002" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/undo002" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.db_mysql/undo003" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/undo003" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api_Proyecto/.env" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Proyecto/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api_Proyecto/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Proyecto/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api_Proyecto/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Proyecto/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api_Proyecto/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Proyecto/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api_Proyecto/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Proyecto/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Api_Proyecto/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Proyecto/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api_Proyecto/migrations/Version20250408210404.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api_Proyecto/src/Entity/WindSpeed.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api_Proyecto/src/Repository/WindSpeedRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api_Proyecto/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Proyecto/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/src/app/app.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api_Proyecto/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Proyecto/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api_Proyecto/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Proyecto/src/Controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFront/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFront/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/components/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/src/app/components/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/components/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/src/app/components/header/header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/components/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/src/app/components/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/components/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/src/app/components/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/components/registro/registro.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/src/app/components/registro/registro.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/components/registro/registro.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/src/app/components/registro/registro.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/src/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,29 +207,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker..docker: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/ProyectoJuanMiguel&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\ProyectoJuanMiguel\\ProyectoFront\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker..docker: Compose Deployment.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/proyecto/ProyectoJuanMiguel",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "D:\\proyecto\\ProyectoJuanMiguel\\ProyectoFront\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;redis&quot;,
-      &quot;mariadb&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "redis",
+      "mariadb"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name=".docker: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
@@ -271,6 +278,9 @@
       <workItem from="1745680499246" duration="6284000" />
       <workItem from="1745831574640" duration="1429000" />
       <workItem from="1745858363689" duration="7722000" />
+      <workItem from="1747516937745" duration="338000" />
+      <workItem from="1747517382826" duration="23000" />
+      <workItem from="1747522359853" duration="3484000" />
     </task>
     <servers />
   </component>
