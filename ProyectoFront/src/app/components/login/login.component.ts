@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';``
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-registro',
@@ -26,11 +27,22 @@ export class LoginComponent {
       .subscribe({
         next: (response) => {
           localStorage.setItem('token', response.token); // Guarda JWT
-          alert('Login correcto');
-          this.router.navigate(['/home']); // Redirige si quieres
+          Swal.fire({
+            icon: 'success',
+            title: 'Login correcto',
+            text: '¡Has iniciado sesión correctamente!',
+            confirmButtonText: 'Aceptar'
+          }).then(() => {
+            this.router.navigate(['/home']); // Redirige tras cerrar alerta
+          });
         },
         error: (error) => {
-          alert('Credenciales incorrectas');
+          Swal.fire({
+            icon: 'error',
+            title: 'Credenciales incorrectas',
+            text: 'Email o contraseña incorrectos. Intenta de nuevo.',
+            confirmButtonText: 'Aceptar'
+          });
         }
       });
   }

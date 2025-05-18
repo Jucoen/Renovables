@@ -3,16 +3,18 @@ import { RouterModule } from '@angular/router';
 import { Router } from '@angular/router';
 import { jwtDecode } from 'jwt-decode';
 import { CommonModule } from '@angular/common';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-header',
+  standalone: true,
   imports: [RouterModule, CommonModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
   userEmail: string | null = null;
-  isAuthenticated: boolean = false;  // Nueva propiedad para saber si está logueado
+  isAuthenticated = false;
 
   constructor(private router: Router) {}
 
@@ -26,23 +28,52 @@ export class HeaderComponent {
       try {
         const decoded: any = jwtDecode(token);
         this.userEmail = decoded.email || decoded.username || 'no definido';
-        this.isAuthenticated = true;  // El usuario está autenticado
+        this.isAuthenticated = true;
       } catch (error) {
         console.error('Error al decodificar el token:', error);
-        this.isAuthenticated = false;  // Si ocurre un error, el usuario no está autenticado
+        this.isAuthenticated = false;
       }
     } else {
-      this.isAuthenticated = false;  // Si no hay token, no está autenticado
+      this.isAuthenticated = false;
     }
   }
 
   logout(): void {
-    // Elimina el token del localStorage
     localStorage.removeItem('token');
-    // Limpia la variable userEmail y actualiza la autenticación
     this.userEmail = null;
-    this.isAuthenticated = false;  // El usuario ha cerrado sesión
-    // Redirige al login
+    this.isAuthenticated = false;
     this.router.navigate(['/login']);
   }
+
+  // Función para chequear acceso y mostrar alerta si no está autenticado
+  checkAccess(route: string): void {
+    if (!this.isAuthenticated) {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Acceso denegado',
+        text: 'Debes iniciar sesión para acceder a esta sección',
+        confirmButtonText: 'Ir a iniciar sesión'
+      }).then(result => {
+        if (result.isConfirmed) {
+          this.router.navigate(['/login']);
+        }
+      });
+    } else {
+      this.router.navigate([route]);
+    }
+  }
+navigateProtected(route: string, event: Event): void {
+  event.preventDefault();  // Para que no navegue automáticamente
+
+  if (this.isAuthenticated) {
+    this.router.navigate([route]);
+  } else {
+    Swal.fire({
+      icon: 'warning',
+      title: 'Debes iniciar sesión',
+      text: 'Para acceder a esta sección, por favor inicia sesión.',
+      confirmButtonText: 'Aceptar'
+    });
+  }
+}
 }

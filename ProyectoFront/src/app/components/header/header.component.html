@@ -1,25 +1,40 @@
+<!-- Mensaje arriba a la izquierda -->
+<div *ngIf="userEmail" class="user-info">
+  Estás conectado como <strong>{{ userEmail }}</strong>
+</div>
+
+<!-- JUMBOTRON -->
 <div class="jumbotron-custom">
-  <div class="container text-center">
+  <div class="container position-relative text-center">
     <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
       <img class="header-logo" src="assets/logo.png" class="logo"/>
     </a>
   </div>
 </div>
 
+<!-- NAVBAR -->
 <nav class="navbar">
   <div class="nav-container">
-    <ul class="nav-links">
-      <li><a routerLink="/fotovoltaica" routerLinkActive="active">Calcular fotovoltaica</a></li>
-      <li><a routerLink="/eolica" routerLinkActive="active">Calcular eólica</a></li>
-      
-      <!-- Condicional para mostrar el link de Registro solo si no está autenticado -->
-      <li *ngIf="!isAuthenticated"><a routerLink="/registro" routerLinkActive="active">Registro</a></li>
-      
-      <li><button (click)="logout()" class="logout-button">Logout</button></li>
-    </ul>
+<ul class="nav-links">
+  <li>
+    <a href="#" (click)="navigateProtected('/fotovoltaica', $event)">Calcular fotovoltaica</a>
+  </li>
+  <li>
+    <a href="#" (click)="navigateProtected('/eolica', $event)">Calcular eólica</a>
+  </li>
+  
+  <!-- El resto igual -->
+  <li *ngIf="!isAuthenticated">
+    <a routerLink="/registro" routerLinkActive="active">Registro</a>
+  </li>
 
-    <div *ngIf="userEmail" class="user-info">
-      Estás conectado como <strong>{{ userEmail }}</strong>
-    </div>
+  <li *ngIf="isAuthenticated">
+    <button (click)="logout()" class="logout-button">Logout</button>
+  </li>
+
+  <li *ngIf="!isAuthenticated">
+    <a routerLink="/login" routerLinkActive="active">Iniciar sesión</a>
+  </li>
+</ul>
   </div>
 </nav>
