@@ -8,7 +8,8 @@
 <section>
   <div class="row justify-content-center mx-5">
     <div class="row justify-content-center mx-5">
-      <div class="col-md-3" *ngFor="let turbina of turbinasDisponibles; let i = index">
+      <div class="col-md-3 px-2" *ngFor="let turbina of turbinasDisponibles; let i = index">
+        
         <div
           class="card panel-select-card"
           [class.active]="i === turbinaSeleccionadoIndex"

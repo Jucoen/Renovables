@@ -1,35 +1,37 @@
-<div class="container mt-4">
-  <h2>PVGIS - Cálculo fotovoltaico</h2>
+<div class="container mt-4" >
+<h2 class="text-center">PVGIS - Cálculo fotovoltaico</h2>
 
-  <div class="mb-3">
-    <label for="latitud" class="form-label">Latitud:</label>
-    <input
-      type="number"
-      id="latitud"
-      class="form-control"
-      [(ngModel)]="latitud"
-      name="latitud"
-      step="any"
-      placeholder="Ej. 30"
-    />
-  </div>
+<div class="mb-3 text-center">
+  <label for="latitud" class="form-label">Latitud:</label>
+  <input
+    type="number"
+    id="latitud"
+    class="form-control mx-auto text-center"
+    style="max-width: 300px;"
+    [(ngModel)]="latitud"
+    name="latitud"
+    step="any"
+    placeholder="Ej. 30"
+  />
+</div>
 
-  <div class="mb-3">
-    <label for="longitud" class="form-label">Longitud:</label>
-    <input
-      type="number"
-      id="longitud"
-      class="form-control"
-      [(ngModel)]="longitud"
-      name="longitud"
-      step="any"
-      placeholder="Ej. -3"
-    />
-  </div>
+<div class="mb-3 text-center">
+  <label for="longitud" class="form-label">Longitud:</label>
+  <input
+    type="number"
+    id="longitud"
+    class="form-control mx-auto text-center"
+    style="max-width: 300px;"
+    [(ngModel)]="longitud"
+    name="longitud"
+    step="any"
+    placeholder="Ej. -3"
+  />
+</div>
 
   <h4>Selecciona el panel fotovoltaico</h4>
  <div class="row">
-  <div class="col-md-3" *ngFor="let panel of panelesDisponibles; let i = index">
+<div class="col-md-3 px-2" *ngFor="let panel of panelesDisponibles; let i = index">
     <div
       class="card panel-select-card mb-3"
       [class.active]="i === panelSeleccionadoIndex"
