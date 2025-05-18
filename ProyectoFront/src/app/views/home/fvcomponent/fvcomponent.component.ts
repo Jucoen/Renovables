@@ -107,36 +107,36 @@ mostrarMensajeError: boolean = false;
   totalAhorroAnualConDesgaste: number[] = [];  // Array para almacenar el ahorro anual con desgaste
 
   calcularEnergia() {
-    const region = this.data.find(d => d.Location === this.ubicacionSeleccionada);
-    const potenciaUnit = this.panelesDisponibles[this.panelSeleccionadoIndex].potencia;
-    this.potenciaPanelW = potenciaUnit * this.cantidad;
+  const region = this.data.find(d => d.Location === this.ubicacionSeleccionada);
+  const potenciaUnit = this.panelesDisponibles[this.panelSeleccionadoIndex].potencia;
+  this.potenciaPanelW = potenciaUnit * this.cantidad;
 
-    if (this.potenciaPanelW > 0 && region) {
-      this.horasSolaresPico = region.SolarIrradiance / 1000;
-      this.energiaDiariaWh = this.potenciaPanelW * this.horasSolaresPico;
-      this.energiaMensualKWh = (this.energiaDiariaWh * 30) / 1000;
-      this.mostrarResultados = true;
+  if (this.potenciaPanelW > 0 && region) {
+    this.horasSolaresPico = region.SolarIrradiance / 1000;
+    this.energiaDiariaWh = this.potenciaPanelW * this.horasSolaresPico;
+    this.energiaMensualKWh = (this.energiaDiariaWh * 30) / 1000;
+    this.mostrarResultados = true;
 
-      const inversion = this.panelesDisponibles[this.panelSeleccionadoIndex].precio * this.cantidad;
-      const ahorroMensual = this.energiaMensualKWh * this.precioElectricidad;
-      let ahorroAnual = ahorroMensual * 12;
+    const inversion = this.panelesDisponibles[this.panelSeleccionadoIndex].precio * this.cantidad;
+    const ahorroMensual = this.energiaMensualKWh * this.precioElectricidad;
+    let ahorroAnual = ahorroMensual * 12;
 
-      // Aplicar desgaste anual durante 25 años
-      this.totalAhorroAnualConDesgaste = [];
-      for (let year = 1; year <= 25; year++) {
-        // Reducir el ahorro anual por el desgaste
-        ahorroAnual = ahorroAnual * (1 - this.desgastePorcentaje);  // Aplicamos el desgaste
-        this.totalAhorroAnualConDesgaste.push(ahorroAnual);  // Guardamos el ahorro anual con desgaste
-      }
-
-      // Calcular el retorno de inversión con el ahorro inicial
-      this.Retorno = ahorroAnual > 0 ? inversion / ahorroAnual : 0;
-      this.inversionCalculada = inversion;
-      this.ahorroAnualCalculado = this.totalAhorroAnualConDesgaste[0]; // Ahorro inicial sin desgaste
-
-      this.gananciasTotales = ahorroAnual * 25; // Ganancia total con desgaste durante 25 años
-    } else {
-      this.mostrarResultados = false;
+    // Aplicar desgaste anual progresivamente
+    this.totalAhorroAnualConDesgaste = [];
+    for (let year = 1; year <= 25; year++) {
+      ahorroAnual *= (1 - this.desgastePorcentaje); // Aplicamos desgaste
+      this.totalAhorroAnualConDesgaste.push(ahorroAnual); // Guardamos el ahorro anual con desgaste
     }
+
+    // Calcular el retorno de inversión con el ahorro inicial
+    this.Retorno = ahorroAnual > 0 ? inversion / this.totalAhorroAnualConDesgaste[0] : 0;
+    this.inversionCalculada = inversion;
+    this.ahorroAnualCalculado = this.totalAhorroAnualConDesgaste[0]; // Ahorro inicial sin desgaste
+
+    // Corregir cálculo de ganancias totales sumando los ahorros anuales con desgaste
+    this.gananciasTotales = this.totalAhorroAnualConDesgaste.reduce((acc, ahorro) => acc + ahorro, 0);
+  } else {
+    this.mostrarResultados = false;
   }
+}
 }

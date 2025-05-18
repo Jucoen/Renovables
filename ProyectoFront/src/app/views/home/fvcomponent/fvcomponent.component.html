@@ -1,162 +1,141 @@
-<div class="row justify-content-center mx-5">
-  <div class="col-md-8 text-center">
-    <h2>Calculadora de Energía Fotovoltaica</h2>
-    <p>Estos son los paneles fotovoltaicos más utilizados junto a su precio, selecciona cuál quieres utilizar para el cálculo.</p>
-  </div>
+<div class="container mt-4 text-center">
+  <h2>Calculadora de Energía Fotovoltaica</h2>
+  <p>Estos son los paneles fotovoltaicos más utilizados junto a su precio, selecciona cuál quieres utilizar para el cálculo.</p>
 </div>
 
-<section>
-  <div class="row justify-content-center mx-5">
-    <div class="row justify-content-center mx-5">
-      <div class="col-md-3" *ngFor="let panel of panelesDisponibles; let i = index">
-        <div 
-          class="card panel-select-card" 
+<h4 class="mt-4 text-center">Selecciona el panel fotovoltaico</h4>
+<div class="row justify-content-center">
+  <div class="col-md-10">
+    <div class="row">
+      <div class="col-md-3 px-2" *ngFor="let panel of panelesDisponibles; let i = index">
+        <div
+          class="card panel-select-card mb-3"
           [class.active]="i === panelSeleccionadoIndex"
-          (click)="seleccionarPanel(i)">
-          <img [src]="panel.imagen">
-          <div class="card-body">
+          (click)="seleccionarPanel(i)"
+          style="cursor:pointer; max-height: 320px; overflow-y: auto;"
+        >
+          <img
+            [src]="panel.imagen"
+            class="card-img-top"
+            [alt]="panel.nombre"
+            style="height: 150px; object-fit: cover;"
+          />
+          <div class="card-body text-center">
             <p class="card-text">{{ panel.nombre }}</p>
-            <p class="card-text fw-bold text-success">Precio: {{ panel.precio | number:'1.0-0' }} €</p>
+            <p class="fw-bold text-success">{{ panel.precio | number:'1.0-0' }} €</p>
+            <p>{{ panel.potencia }} W</p>
           </div>
         </div>
       </div>
     </div>
-    </div>
-  </section>
+  </div>
+</div>
 
+<div class="row justify-content-center mt-5">
+  <div class="col-md-10">
+    <div class="card p-4 card-no-hover CardsOperaciones">
+      <div class="row align-items-center">
+        <P><b>En este panel no se realiza ninguna compra</b>, simplemente, hacemos una estimación de la inversión que se haría para realizar los cálculos</P>
 
-  <div class="row justify-content-center mt-5">
-    <div class="col-md-10">
-      <div class="card p-4 card-no-hover CardsOperaciones">
-        <div class="row align-items-center">
-          <P><b>En este panel no se realiza ninguna compra</b>, simplemente, hacemos una estimación de la inversión que se haría para realizar los cálculos</P>
-  
-          <div class="col-md-6 text-center">
-          
-            <img 
-            [src]="panelesDisponibles[panelSeleccionadoIndex].imagen" 
+        <div class="col-md-6 text-center">
+          <img
+            [src]="panelesDisponibles[panelSeleccionadoIndex].imagen"
             [alt]="panelesDisponibles[panelSeleccionadoIndex].nombre"
             class="img-fluid rounded"
             style="width: 250px; height: 250px; object-fit: cover;"
           >
-          </div>
-  
-            <div class="col-md-6">
-            <h4>{{ panelesDisponibles[panelSeleccionadoIndex].nombre }}</h4>
-            <p><strong>Precio unitario:</strong> {{ panelesDisponibles[panelSeleccionadoIndex].precio | number:'1.0-0' }} €</p>
-  
-            <label for="cantidad">Cantidad:</label>
-            <input 
-              type="number" 
-              id="cantidad" 
-              class="form-control mb-3" 
-              min="1" 
-              [(ngModel)]="cantidad"
-              name="cantidad"
-            >
-  
-            <p><strong>Total:</strong> {{ panelesDisponibles[panelSeleccionadoIndex].precio * cantidad | number:'1.0-0' }} €</p>
-  
-      
-<!-- Mientras esté cargando -->
-  <div *ngIf="cargando" class="text-center my-3">
-   <p><strong>Cargando... mientras tanto, puedes ir eligiendo los paneles</strong></p>
-  </div>
-          </div>
-  
         </div>
-      </div>
-    </div>
-  </div>
 
+        <div class="col-md-6">
+          <h4>{{ panelesDisponibles[panelSeleccionadoIndex].nombre }}</h4>
+          <p><strong>Precio unitario:</strong> {{ panelesDisponibles[panelSeleccionadoIndex].precio | number:'1.0-0' }} €</p>
 
+          <label for="cantidad">Cantidad:</label>
+          <input
+            type="number"
+            id="cantidad"
+            class="form-control mb-3"
+            min="1"
+            [(ngModel)]="cantidad"
+            name="cantidad"
+          >
 
+          <p><strong>Total:</strong> {{ panelesDisponibles[panelSeleccionadoIndex].precio * cantidad | number:'1.0-0' }} €</p>
 
-
-  <div *ngIf="cargando" class="text-center my-5">
-    <div class="spinner-border text-primary" role="status">
-      <span class="visually-hidden">Cargando...</span>
-    </div>
-    <p class="mt-3">Cargando datos, por favor espera...</p>
-  </div>
-  
-
-  <div *ngIf="!cargando" class="row justify-content-center mt-5">
-    <div class="col-md-10">
-      <div class="card p-4 card-no-hover CardsOperaciones">
-        <div class="row align-items-center">
-  
-          <p><b>En este panel no se realiza ninguna compra</b>, simplemente, hacemos una estimación de la inversión que se haría para realizar los cálculos</p>
-          
-          <!-- GRÁFICO -->
-          <div class="col-md-6 text-center CardsOperaciones">
-            <div class="chart-wrapper">
-              <app-line-chart 
-                [inversionTotal]="inversionCalculada" 
-                [ahorroAnual]="ahorroAnualCalculado">
-              </app-line-chart>
-            </div>
-          </div>
-  
-          <!-- FORMULARIO Y RESULTADOS -->
-          <div class="col-md-6">
-  
-            <!-- Formulario -->
-            <div class="info-card CardsOperaciones">
-              <form (ngSubmit)="calcularEnergia()" #panelForm="ngForm" class="info-card-form">
-                <h2>Selecciona tu ubicación</h2>
-  
-                <label for="ubicacion">Ubicación:</label>
-                <select
-                  id="ubicacion"
-                  name="ubicacion"
-                  [(ngModel)]="ubicacionSeleccionada"
-                  required
-                >
-                  <option *ngFor="let region of data" [value]="region.Location">
-                    {{ region.Location }}
-                  </option>
-                </select>
-  
-                <button type="submit">Calcular rentabilidad</button>
-              </form>
-            </div>
-  
-            <!-- Resultados -->
-            <div class="info-card CardsOperaciones" *ngIf="mostrarResultados">
-              <h2>Cálculo de energía generada</h2>
-              <p><strong>Potencia del panel:</strong> {{ potenciaPanelW }} W</p>
-              <p><strong>Ubicación seleccionada:</strong> {{ ubicacionSeleccionada }}</p>
-              <p><strong>Horas solares pico por día:</strong> {{ horasSolaresPico }} h</p>
-              <p><strong>Energía diaria:</strong> {{ energiaDiariaWh }} Wh</p>
-              <p><strong>Energía mensual:</strong> {{ energiaMensualKWh }} kWh</p>
-              <p><strong>Precio medio electricidad:</strong> {{ precioElectricidad }} €/kWh</p>
-              <p><strong>Años para recuperar inversión:</strong> {{ Retorno | number:'1.1-1' }} años</p>
-              <p><strong>Ganancia total estimada (en {{ Retorno | number:'1.1-1' }} años):</strong> {{ gananciasTotales | number:'1.0-0' }} €</p>
-            </div>
-  
+          <div *ngIf="cargando" class="text-center my-3">
+            <p><strong>Cargando... mientras tanto, puedes ir eligiendo los paneles</strong></p>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 
+<div *ngIf="cargando" class="text-center my-5">
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Cargando...</span>
+  </div>
+  <p class="mt-3">Cargando datos, por favor espera...</p>
+</div>
 
+<div class="info-card CardsOperaciones text-center" *ngIf="!cargando">
+  <form (ngSubmit)="calcularEnergia()" #panelForm="ngForm" class="info-card-form">
+    <h2>Selecciona tu ubicación</h2>
 
+    <div class="form-group">
+      <label for="ubicacion" class="form-label d-block">Ubicación:</label>
+      <select
+        id="ubicacion"
+        name="ubicacion"
+        [(ngModel)]="ubicacionSeleccionada"
+        required
+        class="form-select mx-auto"
+        style="max-width: 200px;"
+      >
+        <option *ngFor="let region of data" [value]="region.Location">
+          {{ region.Location }}
+        </option>
+      </select>
+    </div>
 
+      <button
+ type="submit"
+  [disabled]="cargando"
+  style="background-color: #87CEEB; color: black; border: 1px solid black; padding: 10px 20px; border-radius: 5px; display: block; margin: 10px auto; text-align: center; font-weight: bold; cursor: pointer;"
+>
+  {{ cargando ? 'Calculando...' : '  Calcular rentabilidad' }}
+</button>
 
+  </form>
+</div>
 
+<div *ngIf="!cargando && mostrarResultados" class="row justify-content-center mt-5">
+  <div class="col-md-10">
+    <div class="card p-4 card-no-hover CardsOperaciones">
+      <div class="row align-items-center">
+           <div class="col-md-6 text-center CardsOperaciones">
+          <div class="chart-wrapper">
+            <app-line-chart
+              [inversionTotal]="inversionCalculada"
+              [ahorroAnual]="ahorroAnualCalculado"
+            ></app-line-chart>
+          </div>
+        </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <div class="col-md-6">
+          <div class="CardsOperaciones sin-borde">
+            <h2>Cálculo de energía generada</h2>
+            <p><strong>Potencia del panel:</strong> {{ potenciaPanelW }} W</p>
+            <p><strong>Ubicación seleccionada:</strong> {{ ubicacionSeleccionada }}</p>
+            <p><strong>Horas solares pico por día:</strong> {{ horasSolaresPico }} h</p>
+            <p><strong>Energía diaria:</strong> {{ energiaDiariaWh }} Wh</p>
+            <p><strong>Energía mensual:</strong> {{ energiaMensualKWh }} kWh</p>
+            <p><strong>Precio medio electricidad:</strong> {{ precioElectricidad }} €/kWh</p>
+            <p><strong>Años para recuperar inversión:</strong> {{ Retorno | number:'1.1-1' }} años</p>
+            <p><strong>Ganancia total estimada (en {{ Retorno | number:'1.1-1' }} años):</strong> {{ gananciasTotales | number:'1.0-0' }} €</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

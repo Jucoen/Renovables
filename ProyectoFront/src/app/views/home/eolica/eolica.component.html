@@ -1,130 +1,132 @@
 <div class="row justify-content-center mx-5">
-    <div class="col-md-8 text-center">
-        <h2>Calculadora de Energía Mini-Eólica</h2>
-        <p>Estas son las mini-turbinas eólicas más populares. Selecciona cuál quieres utilizar para estimar la generación de energía y rentabilidad.</p>
-    </div>
+  <div class="col-md-8 text-center">
+    <h2>Calculadora de Energía Mini-Eólica</h2>
+    <p>Estas son las mini-turbinas eólicas más populares. Selecciona cuál quieres utilizar para estimar la generación de energía y rentabilidad.</p>
+  </div>
 </div>
 
 <section>
+  <div class="row justify-content-center mx-5">
     <div class="row justify-content-center mx-5">
-        <div class="row justify-content-center mx-5">
-            <div class="col-md-3" *ngFor="let turbina of turbinasDisponibles; let i = index">
-                <div 
-                    class="card panel-select-card" 
-                    [class.active]="i === turbinaSeleccionadoIndex"
-                    (click)="seleccionarTurbina(i)">
-                    <img [src]="turbina.imagen">
-                    <div class="card-body">
-                        <p class="card-text">{{ turbina.nombre }}</p>
-                        <p class="card-text fw-bold text-success">Precio: {{ turbina.precio | number:'1.0-0' }} €</p>
-                    </div>
-                </div>
-            </div>
+      <div class="col-md-3" *ngFor="let turbina of turbinasDisponibles; let i = index">
+        <div
+          class="card panel-select-card"
+          [class.active]="i === turbinaSeleccionadoIndex"
+          (click)="seleccionarTurbina(i)"
+        >
+          <img [src]="turbina.imagen">
+          <div class="card-body">
+            <p class="card-text">{{ turbina.nombre }}</p>
+            <p class="card-text fw-bold text-success">Precio: {{ turbina.precio | number:'1.0-0' }} €</p>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <div class="row justify-content-center mt-5">
-    <div class="col-md-10">
-        <div class="card p-4 card-no-hover">
-            <div class="row align-items-center">
-                <p><b>Este simulador no representa una compra real</b>, solo una estimación del coste y ahorro potencial de instalar turbinas mini-eólicas.</p>
+  <div class="col-md-8">
+    <div class="card p-4 card-no-hover">
+      <div class="row align-items-center">
+        <p><b>Este simulador no representa una compra real</b>, solo una estimación del coste y ahorro potencial de instalar turbinas mini-eólicas.</p>
 
-                <div class="col-md-6 text-center">
-                    <img 
-                        [src]="turbinasDisponibles[turbinaSeleccionadoIndex].imagen" 
-                        [alt]="turbinasDisponibles[turbinaSeleccionadoIndex].nombre"
-                        class="img-fluid rounded"
-                        style="min-height: 350px;">
-                </div>
-
-                <div class="col-md-6">
-                    <h4>{{ turbinasDisponibles[turbinaSeleccionadoIndex].nombre }}</h4>
-                    <p><strong>Precio unitario:</strong> {{ turbinasDisponibles[turbinaSeleccionadoIndex].precio | number:'1.0-0' }} €</p>
-
-                    <label for="cantidad">Cantidad de turbinas:</label>
-                    <input 
-                        type="number" 
-                        id="cantidad" 
-                        class="form-control mb-3" 
-                        min="1" 
-                        [(ngModel)]="cantidad"
-                        name="cantidad">
-
-                    <p><strong>Total:</strong> {{ turbinasDisponibles[turbinaSeleccionadoIndex].precio * cantidad | number:'1.0-0' }} €</p>
-
-                    <button class="btn btn-primary" (click)="calcularEnergia()">Calcular Rentabilidad</button>
-                    <div *ngIf="!ubicacionSeleccionada" style="color: red;">
-                        <p><strong>¡Por favor, seleccione la comunidad autónoma!</strong></p>
-                    </div>
-                </div>
-            </div>
+        <div class="col-md-6 text-center">
+          <img
+            [src]="turbinasDisponibles[turbinaSeleccionadoIndex].imagen"
+            [alt]="turbinasDisponibles[turbinaSeleccionadoIndex].nombre"
+            class="img-fluid rounded"
+            style="width: 250px; height: 250px; object-fit: cover;"
+          />
         </div>
+
+        <div class="col-md-6">
+          <h4>{{ turbinasDisponibles[turbinaSeleccionadoIndex].nombre }}</h4>
+          <p><strong>Precio unitario:</strong> {{ turbinasDisponibles[turbinaSeleccionadoIndex].precio | number:'1.0-0' }} €</p>
+
+          <label for="cantidad">Cantidad de turbinas:</label>
+          <input
+            type="number"
+            id="cantidad"
+            class="form-control mb-3"
+            min="1"
+            [(ngModel)]="cantidad"
+            name="cantidad"
+          />
+
+          <p><strong>Total:</strong> {{ turbinasDisponibles[turbinaSeleccionadoIndex].precio * cantidad | number:'1.0-0' }} €</p>
+        </div>
+      </div>
     </div>
+  </div>
+</div>
+
+<div *ngIf="!cargando" class="row justify-content-center mt-4">
+  <div class="col-md-8">
+    <div class="info-card text-center">
+      <h2>Selecciona tu ubicación</h2>
+      <div class="form-group">
+        <label for="ubicacion" class="form-label d-block">Ubicación:</label>
+        <select
+          id="ubicacion"
+          name="ubicacion"
+          [(ngModel)]="ubicacionSeleccionada"
+          required
+          class="form-select mx-auto"
+          style="max-width: 200px;"
+        >
+          <option *ngFor="let region of data" [value]="region.Location">
+            {{ region.Location }}
+          </option>
+        </select>
+      </div>
+      <button
+        type="submit"
+        (click)="calcularEnergia()"
+        [disabled]="cargando"
+        class="btn btn-primary mt-3"
+        style="background-color: #87CEEB; color: black; border: 1px solid black; padding: 10px 20px; border-radius: 5px; font-weight: bold; cursor: pointer;"
+      >
+        {{ cargando ? 'Calculando...' : 'Calcular rentabilidad' }}
+      </button>
+    </div>
+  </div>
 </div>
 
 <div *ngIf="cargando" class="text-center my-5">
-    <div class="spinner-border text-primary" role="status">
-        <span class="visually-hidden">Cargando...</span>
-    </div>
-    <p class="mt-3">Cargando datos, por favor espera...</p>
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Cargando...</span>
+  </div>
+  <p class="mt-3">Cargando datos, por favor espera...</p>
 </div>
 
-<div *ngIf="!cargando" class="row justify-content-center mt-5">
-    <div class="col-md-10">
-        <div class="card p-4 card-no-hover">
-            <div class="row align-items-center">
-
-                <p><b>Este simulador no representa una compra real</b>, solo una estimación del coste y ahorro potencial de instalar turbinas mini-eólicas.</p>
-
-                <!-- GRÁFICO -->
-                <div class="col-md-6 text-center">
-                    <div class="chart-wrapper">
-                        <app-line-chart 
-                            [inversionTotal]="inversionCalculada" 
-                            [ahorroAnual]="ahorroAnualCalculado">
-                        </app-line-chart>
-                    </div>
-                </div>
-
-                <!-- FORMULARIO Y RESULTADOS -->
-                <div class="col-md-6">
-
-                    <!-- Formulario -->
-                    <div class="info-card">
-                        <form (ngSubmit)="calcularEnergia()" #panelForm="ngForm" class="info-card-form">
-                            <h2>Selecciona tu ubicación</h2>
-
-                            <label for="ubicacion">Ubicación:</label>
-                            <select
-                                id="ubicacion"
-                                name="ubicacion"
-                                [(ngModel)]="ubicacionSeleccionada"
-                                required>
-                                <option *ngFor="let region of data" [value]="region.Location">
-                                    {{ region.Location }}
-                                </option>
-                            </select>
-
-                            <button type="submit">Calcular rentabilidad</button>
-                        </form>
-                    </div>
-
-                    <!-- Resultados -->
-                    <div class="info-card" *ngIf="mostrarResultados">
-                        <h2>Cálculo de energía generada</h2>
-                        <p><strong>Potencia total:</strong> {{ potenciaTotalKW | number: '1.1-1' }} kW</p>
-                        <p><strong>Ubicación seleccionada:</strong> {{ ubicacionSeleccionada }}</p>
-                        <p><strong>Velocidad media del viento:</strong> {{ velocidadViento }} m/s</p>
-                        <p><strong>Energía diaria estimada:</strong> {{ energiaDiariaWh }} Wh</p>
-                        <p><strong>Energía mensual:</strong> {{ energiaMensualKWh }} kWh</p>
-                        <p><strong>Precio medio electricidad:</strong> {{ precioElectricidad }} €/kWh</p>
-                        <p><strong>Años para recuperar inversión:</strong> {{ Retorno | number:'1.1-1' }} años</p>
-                        <p><strong>Ganancia total estimada (en 25 años):</strong> {{ gananciasTotales | number:'1.0-0' }} €</p>
-                    </div>
-
-                </div>
-            </div>
+<div *ngIf="!cargando && mostrarResultados" class="row justify-content-center mt-5">
+  <div class="col-md-8">
+    <div class="card p-4 card-no-hover">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center">
+          <div class="chart-wrapper">
+            <app-line-chart
+              [inversionTotal]="inversionCalculada"
+              [ahorroAnual]="ahorroAnualCalculado"
+            ></app-line-chart>
+          </div>
         </div>
+
+        <div class="col-md-6">
+          <div class="info-card mt-4">
+            <h2>Cálculo de energía generada</h2>
+            <p><strong>Potencia total:</strong> {{ potenciaTotalKW | number: '1.1-1' }} kW</p>
+            <p><strong>Ubicación seleccionada:</strong> {{ ubicacionSeleccionada }}</p>
+            <p><strong>Velocidad media del viento:</strong> {{ velocidadViento }} m/s</p>
+            <p><strong>Energía diaria estimada:</strong> {{ energiaDiariaWh }} Wh</p>
+            <p><strong>Energía mensual:</strong> {{ energiaMensualKWh }} kWh</p>
+            <p><strong>Precio medio electricidad:</strong> {{ precioElectricidad }} €/kWh</p>
+            <p><strong>Años para recuperar inversión:</strong> {{ Retorno | number:'1.1-1' }} años</p>
+            <p><strong>Ganancia total estimada (en 25 años):</strong> {{ gananciasTotales | number:'1.0-0' }} €</p>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

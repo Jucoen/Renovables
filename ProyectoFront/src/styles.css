@@ -325,3 +325,66 @@ canvas {
 .card-auth button:not(:disabled):hover {
   background-color: #388e3c;
 }
+
+.card-body.d-flex {
+  display: flex;
+  gap: 2rem; /* espacio entre texto y gráfico */
+}
+
+.info-text p {
+  margin-bottom: 0.5rem;
+}
+
+.chart-container {
+  /* Opcional para ajustar tamaño */
+  width: 100%;
+}
+
+.card-body.d-flex {
+  display: flex;
+  gap: 2rem; /* espacio entre texto y gráfico */
+}
+
+.info-text p {
+  margin-bottom: 0.5rem;
+}
+
+.chart-container {
+  /* Opcional para ajustar tamaño */
+  width: 100%;
+}
+
+.col-md-3.px-2 {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+/* Estilo para quitar el borde */
+.sin-borde {
+  border: none !important;
+  padding: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.info-card {
+  /* Otros estilos que ya tengas para info-card */
+}
+
+/* Quitar el borde del div que contiene el formulario de ubicación */
+.info-card.CardsOperaciones {
+  border: none !important;
+}
+
+/* Quitar el borde del div que contiene el gráfico */
+.CardsOperaciones.text-center {
+  border: none !important;
+  padding: 0 !important; /* También quitamos el padding si no lo necesitas */
+  margin-bottom: 0 !important; /* También quitamos el margen inferior si no lo necesitas */
+}
+
+/* Quitar el borde del div que contiene el texto de cálculo generado */
+.CardsOperaciones[ng-reflect-ng-if] { /* Selector para el div condicional */
+  border: none !important;
+  padding: 0 !important; /* También quitamos el padding si no lo necesitas */
+  margin-bottom: 0 !important; /* También quitamos el margen inferior si no lo necesitas */
+}

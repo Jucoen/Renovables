@@ -17,6 +17,10 @@
   <div class="nav-container">
 <ul class="nav-links">
   <li>
+<a href="#" (click)="navigateProtected('/fotovoltaicaform', $event)">Fotovoltaica (Formulario)</a>
+</li>
+
+  <li>
     <a href="#" (click)="navigateProtected('/fotovoltaica', $event)">Calcular fotovoltaica</a>
   </li>
   <li>
@@ -24,7 +28,7 @@
   </li>
   
   <!-- El resto igual -->
-  <li *ngIf="!isAuthenticated">
+  <li *ngIf="!isAuthenticated"> 
     <a routerLink="/registro" routerLinkActive="active">Registro</a>
   </li>
 

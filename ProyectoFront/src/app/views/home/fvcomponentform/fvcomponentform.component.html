@@ -1,0 +1,96 @@
+<div class="container mt-4">
+  <h2>PVGIS - Cálculo fotovoltaico</h2>
+
+  <div class="mb-3">
+    <label for="latitud" class="form-label">Latitud:</label>
+    <input
+      type="number"
+      id="latitud"
+      class="form-control"
+      [(ngModel)]="latitud"
+      name="latitud"
+      step="any"
+      placeholder="Ej. 30"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="longitud" class="form-label">Longitud:</label>
+    <input
+      type="number"
+      id="longitud"
+      class="form-control"
+      [(ngModel)]="longitud"
+      name="longitud"
+      step="any"
+      placeholder="Ej. -3"
+    />
+  </div>
+
+  <h4>Selecciona el panel fotovoltaico</h4>
+ <div class="row">
+  <div class="col-md-3" *ngFor="let panel of panelesDisponibles; let i = index">
+    <div
+      class="card panel-select-card mb-3"
+      [class.active]="i === panelSeleccionadoIndex"
+      (click)="seleccionarPanel(i)"
+      style="cursor:pointer; max-height: 320px; overflow-y: auto;"
+    >
+      <img
+        [src]="panel.imagen"
+        class="card-img-top"
+        [alt]="panel.nombre"
+        style="height: 150px; object-fit: cover;"
+      />
+      <div class="card-body text-center">
+        <p class="card-text">{{ panel.nombre }}</p>
+        <p class="fw-bold text-success">{{ panel.precio | number:'1.0-0' }} €</p>
+        <p>{{ panel.potencia }} W</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="mb-3 card-paneles">
+    <label for="cantidad" class="form-label">Cantidad de paneles:</label>
+    <input
+      type="number"
+      id="cantidad"
+      class="form-control"
+      [(ngModel)]="cantidad"
+      name="cantidad"
+      min="1"
+    />
+  </div>
+<button
+  (click)="calcularProduccion()"
+  [disabled]="cargando"
+  style="background-color: #87CEEB; color: black; border: 1px solid black; padding: 10px 20px; border-radius: 5px; display: block; margin: 10px auto; text-align: center; font-weight: bold; cursor: pointer;"
+>
+  {{ cargando ? 'Calculando...' : 'Calcular producción anual' }}
+</button>
+
+  <div *ngIf="error" style="color: red; margin-top: 1rem;">
+    {{ error }}
+  </div>
+
+<div class="card mt-4" *ngIf="mostrarResultados">
+  <div class="card-body d-flex justify-content-center align-items-center">
+    <div class="info-text me-4 text-start" style="flex: 1; max-width: 400px;">
+      <p><strong>Potencia total instalada:</strong> {{ panelesDisponibles[panelSeleccionadoIndex].potencia * cantidad }} W</p>
+      <p><strong>Producción anual estimada:</strong> {{ produccionAnual | number:'1.0-2' }} kWh</p>
+      <p><strong>Precio electricidad:</strong> {{ precioElectricidad | currency:'EUR' }}</p>
+      <p><strong>Inversión total:</strong> {{ inversionTotal | currency:'EUR' }}</p>
+      <p><strong>Ahorro anual:</strong> {{ ahorroAnual | currency:'EUR' }}</p>
+      <p><strong>Retorno inversión:</strong> {{ retornoInversion | number:'1.1-1' }} años</p>
+      <p><strong>Ganancia neta (25 años):</strong> {{ gananciasTotales | currency:'EUR' }}</p>
+    </div>
+
+    <div class="chart-container" style="flex: 1; max-width: 600px;">
+      <app-line-chart
+        [inversionTotal]="inversionTotal"
+        [ahorroAnual]="ahorroAnual">
+      </app-line-chart>
+    </div>
+  </div>
+</div>
