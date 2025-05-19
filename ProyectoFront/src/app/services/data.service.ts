@@ -7,7 +7,7 @@ import { map, tap } from 'rxjs/operators';
 })
 export class DataService {
 
-  public lastRaw: any = null;  // <-- Añadido para guardar la última respuesta
+  public lastRaw: any = null;  
 
   constructor(private http: HttpClient) { }
 
@@ -34,7 +34,7 @@ export class DataService {
 
     return this.http.get<any>(url).pipe(
       tap(raw => {
-        this.lastRaw = raw;  // Guardamos la respuesta entera para debug o uso posterior
+        this.lastRaw = raw;  // debug
         console.debug('[PVGIS hourly sample]', raw.outputs.hourly[0]);
       }),
       map(response => {

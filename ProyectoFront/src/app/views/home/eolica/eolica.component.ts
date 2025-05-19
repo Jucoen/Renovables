@@ -117,21 +117,11 @@ export class EolicaComponent {
     this.ahorroAnualCalculado = this.totalAhorroAnualConDesgaste[0];
     this.gananciasTotales = this.totalAhorroAnualConDesgaste.reduce((a, b) => a + b, 0);
 
-    // Scroll al resultado
+    
     setTimeout(() => {
       if (this.resultadosRef) {
         this.resultadosRef.nativeElement.scrollIntoView({ behavior: 'smooth' });
       }
     }, 100);
-
-    // Consolas para depuración
-    console.log('Velocidad del viento:', this.velocidadViento);
-    console.log('Potencia total KW:', this.potenciaTotalKW);
-    console.log('Horas equivalentes por día:', horasEquivalentesDia);
-    console.log('Energía diaria estimada (Wh):', this.energiaDiariaWh);
-    console.log('Energía mensual estimada (kWh):', this.energiaMensualKWh);
-    console.log('Inversión:', inversion);
-    console.log('Ahorro anual:', ahorroAnual);
-    console.log('Retorno de inversión:', this.Retorno);
   }
 }

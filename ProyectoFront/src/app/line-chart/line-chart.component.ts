@@ -56,7 +56,7 @@ export class LineChartComponent implements OnInit, OnChanges {
             backgroundColor: 'rgba(75, 192, 192, 0.2)',
             borderColor: 'rgb(75, 192, 192)',
             borderWidth: 2,
-            pointRadius: 0, /* Sin puntitos grandes */
+            pointRadius: 0, 
             tension: 0.3
           },
           {
@@ -72,7 +72,7 @@ export class LineChartComponent implements OnInit, OnChanges {
       },
       options: {
         responsive: true,
-        maintainAspectRatio: false, /* Mejor en móviles */
+        maintainAspectRatio: false, 
         scales: {
           y: {
             beginAtZero: true,

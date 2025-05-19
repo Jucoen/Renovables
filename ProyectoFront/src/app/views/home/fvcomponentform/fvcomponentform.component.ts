@@ -30,13 +30,11 @@ export class FVComponentFormComponent {
   irradiacionAnual: number = 0;
   produccionAnual: number = 0;
 
-  // Variables para gráfica y cálculos económicos
   inversionTotal: number = 0;
   ahorroAnual: number = 0;
   retornoInversion: number = 0;
   gananciasTotales: number = 0;
 
-  // Parámetros configurables
   factorRendimientoTotal: number = 0.86;
   desgasteAnual: number = 0.05;
   vidaUtil: number = 25;
@@ -89,7 +87,6 @@ calcularProduccion() {
       this.calcularEconomia();
       this.mostrarResultados = true;
 
-      // Delay para asegurar renderizado y luego hacer scroll
       setTimeout(() => {
         if (this.resultadosRef) {
           this.resultadosRef.nativeElement.scrollIntoView({ behavior: 'smooth' });

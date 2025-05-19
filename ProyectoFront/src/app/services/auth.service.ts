@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:8050/api/login_check'; // Ruta de Symfony para login JWT
+  private apiUrl = 'http://localhost:8050/api/login_check';
 
   constructor(private http: HttpClient, private router: Router) {}
 
