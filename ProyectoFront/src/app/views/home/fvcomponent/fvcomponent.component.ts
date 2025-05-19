@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { DataService } from '../../../services/data.service';
 import { CommonModule } from '@angular/common';
-import { FormsModule, NgModel } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { LineChartComponent } from "../../../line-chart/line-chart.component";
 
 @Component({
@@ -11,6 +11,7 @@ import { LineChartComponent } from "../../../line-chart/line-chart.component";
   styleUrl: './fvcomponent.component.css'
 })
 export class FVComponentComponent {
+  @ViewChild('resultados') resultadosRef!: ElementRef;
 
   panelesDisponibles = [
     {
@@ -38,105 +39,97 @@ export class FVComponentComponent {
       imagen: 'assets/ImagenesFV/PanelPoli400W.jpg'
     },
   ];
+
   panelSeleccionadoIndex: number = 0; 
   potenciaPanelW: number = 330; 
+
   seleccionarPanel(index: number) {
     this.panelSeleccionadoIndex = index;
     this.potenciaPanelW = this.panelesDisponibles[index].potencia;
   }
 
-public data: any[] = [];
-HPS: any;
-ubicacionSeleccionada: string = '';
-  
-  constructor(public service: DataService){}
+  public data: any[] = [];
+  HPS: any;
+  ubicacionSeleccionada: string = '';
+  constructor(public service: DataService) {}
   cargando: boolean = true;
-  
+
   public getResponse(): void {
     this.service.getResponse().subscribe((response: any) => {
       this.data = response;
       this.cargando = false;
-      
-    })
+    });
   }
 
-  public ngOnInit():void{
+  public ngOnInit(): void {
     this.getResponse();
   }
 
+  cantidad: number = 1;
 
-// preparativos precalculo
+  panelSeleccionado = {
+    nombre: 'Panel Monocristalino 330W',
+    potencia: 330,
+    precio: 2800,
+    img: 'data:image/jpeg;base64,/=='
+  };
 
-cantidad: number = 1;
+  continuar() {
+    this.potenciaPanelW = this.panelSeleccionado.potencia;
+    this.mostrarResultados = false;
+  }
 
-panelSeleccionado = {
-  nombre: 'Panel Monocristalino 330W',
-  potencia: 330,
-  precio: 2800,
-  img: 'data:image/jpeg;base64,/=='
-};
-
-continuar() {
-  this.potenciaPanelW = this.panelSeleccionado.potencia;
-  this.mostrarResultados = false;
-
-}
-
-// mensaje error si no se ha seleccionado comunidad
-ubicacionSeleccionadaValida: boolean = true; 
-mostrarMensajeError: boolean = false;
-
-
-  // calculos eléctricos panel fotovoltaico
+  ubicacionSeleccionadaValida: boolean = true; 
+  mostrarMensajeError: boolean = false;
 
   horasSolaresPico: number = 0;
-
   energiaDiariaWh: number = 0;
   energiaMensualKWh: number = 0;
-
   mostrarResultados: boolean = false;
 
-  precioElectricidad: number = 0.20; // POR COMPROBAR
+  precioElectricidad: number = 0.20;
   Retorno: number = 0;
   inversionCalculada: number = 0;
   ahorroAnualCalculado: number = 0;
-  
   gananciasTotales: number = 0; 
 
-  desgastePorcentaje: number = 0.005;  // Desgaste anual del 0.5% (puedes ajustarlo)
-  totalAhorroAnualConDesgaste: number[] = [];  // Array para almacenar el ahorro anual con desgaste
+  desgastePorcentaje: number = 0.005;
+  totalAhorroAnualConDesgaste: number[] = [];
 
   calcularEnergia() {
-  const region = this.data.find(d => d.Location === this.ubicacionSeleccionada);
-  const potenciaUnit = this.panelesDisponibles[this.panelSeleccionadoIndex].potencia;
-  this.potenciaPanelW = potenciaUnit * this.cantidad;
+    const region = this.data.find(d => d.Location === this.ubicacionSeleccionada);
+    const potenciaUnit = this.panelesDisponibles[this.panelSeleccionadoIndex].potencia;
+    this.potenciaPanelW = potenciaUnit * this.cantidad;
 
-  if (this.potenciaPanelW > 0 && region) {
-    this.horasSolaresPico = region.SolarIrradiance / 1000;
-    this.energiaDiariaWh = this.potenciaPanelW * this.horasSolaresPico;
-    this.energiaMensualKWh = (this.energiaDiariaWh * 30) / 1000;
-    this.mostrarResultados = true;
+    if (this.potenciaPanelW > 0 && region) {
+      this.horasSolaresPico = region.SolarIrradiance / 1000;
+      this.energiaDiariaWh = this.potenciaPanelW * this.horasSolaresPico;
+      this.energiaMensualKWh = (this.energiaDiariaWh * 30) / 1000;
+      this.mostrarResultados = true;
 
-    const inversion = this.panelesDisponibles[this.panelSeleccionadoIndex].precio * this.cantidad;
-    const ahorroMensual = this.energiaMensualKWh * this.precioElectricidad;
-    let ahorroAnual = ahorroMensual * 12;
+      const inversion = this.panelesDisponibles[this.panelSeleccionadoIndex].precio * this.cantidad;
+      const ahorroMensual = this.energiaMensualKWh * this.precioElectricidad;
+      let ahorroAnual = ahorroMensual * 12;
 
-    // Aplicar desgaste anual progresivamente
-    this.totalAhorroAnualConDesgaste = [];
-    for (let year = 1; year <= 25; year++) {
-      ahorroAnual *= (1 - this.desgastePorcentaje); // Aplicamos desgaste
-      this.totalAhorroAnualConDesgaste.push(ahorroAnual); // Guardamos el ahorro anual con desgaste
+      this.totalAhorroAnualConDesgaste = [];
+      for (let year = 1; year <= 25; year++) {
+        ahorroAnual *= (1 - this.desgastePorcentaje);
+        this.totalAhorroAnualConDesgaste.push(ahorroAnual);
+      }
+
+      this.Retorno = ahorroAnual > 0 ? inversion / this.totalAhorroAnualConDesgaste[0] : 0;
+      this.inversionCalculada = inversion;
+      this.ahorroAnualCalculado = this.totalAhorroAnualConDesgaste[0];
+      this.gananciasTotales = this.totalAhorroAnualConDesgaste.reduce((acc, ahorro) => acc + ahorro, 0);
+
+      // Scroll automático al resultado
+      setTimeout(() => {
+        if (this.resultadosRef) {
+          this.resultadosRef.nativeElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      this.mostrarResultados = false;
     }
-
-    // Calcular el retorno de inversión con el ahorro inicial
-    this.Retorno = ahorroAnual > 0 ? inversion / this.totalAhorroAnualConDesgaste[0] : 0;
-    this.inversionCalculada = inversion;
-    this.ahorroAnualCalculado = this.totalAhorroAnualConDesgaste[0]; // Ahorro inicial sin desgaste
-
-    // Corregir cálculo de ganancias totales sumando los ahorros anuales con desgaste
-    this.gananciasTotales = this.totalAhorroAnualConDesgaste.reduce((acc, ahorro) => acc + ahorro, 0);
-  } else {
-    this.mostrarResultados = false;
   }
-}
 }

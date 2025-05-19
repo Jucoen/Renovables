@@ -1,0 +1,39 @@
+<!-- Imagen de fondo -->
+<div class="video-fondo">
+  <img src="assets/PortadaAerogenerador.jpg" alt="Imagen de fondo" class="imagen-fondo" />
+</div>
+
+<!-- Contenido principal en card -->
+ <div class="page-wrapper">
+<div class="contenido">
+  <div class="info-card" style="color: black;">
+    <h2>Información general de la aplicación</h2>
+    <p>
+      Esta aplicación permite calcular el potencial de generación de energía renovable, tanto solar fotovoltaica como eólica, en una ubicación específica.
+      Para obtener resultados más precisos, se recomienda usar la API externa PVGIS, que proporciona datos reales y detallados.
+      Sin embargo, para quienes prefieran simplicidad, ofrecemos nuestra propia API interna para cálculos de energía fotovoltaica y eólica.
+    </p>
+
+    <h3>Secciones principales</h3>
+
+    <div class="info-section">
+      <p><strong>Calcular con PVGIS:</strong> Utiliza la API externa para obtener datos precisos y confiables del potencial solar.</p>
+      <button (click)="navigateTo('/fotovoltaicaform')">Calcular fotovoltaica con PVGIS</button>
+    </div>
+
+    <div class="info-section">
+      <p><strong>Calcular Fotovoltaico:</strong> Realiza cálculos y muestra resultados basados en nuestra API interna para energía solar.</p>
+       <button (click)="navigateTo('/fotovoltaica')">Calcular fotovoltaico</button>
+    </div>
+
+    <div class="info-section">
+      <p><strong>Calcular Eólica:</strong> Cálculos y visualización del potencial eólico usando nuestra API propia.</p>
+      <button (click)="navigateTo('/eolica')">Calcular eólica</button>
+    </div>
+
+    <p class="mt-3">
+      Recuerda que es <b>necesario</b> estar <b>registrado</b> e <b>iniciar sesión</b> para acceder a estas funcionalidades.
+    </p>
+  </div>
+</div>
+</div>

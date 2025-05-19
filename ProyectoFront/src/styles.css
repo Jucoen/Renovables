@@ -1,150 +1,144 @@
+/* Navbar principal */
 .navbar {
   padding: 20px 0;
   margin: 20px 0;
-  border: 2px solid #003366;
+  border: 2px solid #003366; /* borde azul marino */
   font-weight: bold;
-  background-color: #003366; /* Azul marino, igual que tus bordes */
+  background-color: #003366; /* fondo azul marino */
 }
 
+/* Contenedor centrado dentro de navbar */
 .nav-container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto; /* centra horizontalmente */
   padding: 0 15px;
 }
 
+/* Lista de enlaces de navegación */
 .nav-links {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  list-style: none; /* quita los puntos */
+  display: flex; /* flexbox para alinear */
+  justify-content: center; /* centra horizontalmente */
+  align-items: center; /* centra verticalmente */
   margin: 0;
   padding: 0;
 }
 
 .nav-links li {
-  margin: 0 10px;
+  margin: 0 10px; /* separación entre enlaces */
 }
 
 .nav-links a {
-  display: inline-block;
   padding: 10px 15px;
   border-radius: 5px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  text-decoration: none;
   color: white;
+  text-decoration: none;
+  transition: transform 0.3s, background-color 0.3s;
+  display: inline-block;
 }
 
 .nav-links a:hover {
-  transform: scale(1.1);
+   background-color: black !important;
 }
 
 .nav-links a.active {
-  background-color: black; /* También el active con el mismo azul */
-}
-/* FONDO */
-.imagen-fondo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
+  background-color: black; /* estilo para enlace activo */
 }
 
-/* CONTENIDO CENTRAL */
+/* Imagen de fondo que cubre toda el área */
+.imagen-fondo {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: -1; /* detrás de todo */
+}
+
+/* Contenido centrado vertical y horizontalmente */
 .contenido {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
-  z-index: 10;
-  padding: 2rem;
-  width: 100%;
   max-width: 1200px;
+  width: 100%;
 }
 
-/* LOGO */
+/* Logo con efecto de opacidad al pasar el mouse */
 .logo-container {
   margin-bottom: 20px;
 }
 
 .logo {
   width: 350px;
-  height: auto;
   opacity: 0.9;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s;
 }
 
 .logo:hover {
   opacity: 1;
 }
 
-/* TEXTO BIENVENIDA */
+/* Texto de bienvenida */
 .texto-bienvenida p {
   font-size: 1.2rem;
   margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
 }
 
-/* CARD-HOME */
+/* Tarjeta principal (card) */
 .card-home {
   position: relative;
   border: 2px solid #003366;
   border-radius: 16px;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.08);
   max-width: 700px;
-  width: 100%;
-  background-color: #fff;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.08);
   height: 400px;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card-home:hover {
   transform: scale(1.05);
-  box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 14px rgba(0,0,0,0.15);
 }
 
-/* Imagen dentro de la card */
 .card-home img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* Título de la card */
+/* Título dentro de la card */
 .card-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   padding: 1rem;
   font-size: 1.2rem;
   font-weight: 600;
   color: #003366;
+  background: rgba(255,255,255,0.85);
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.85);
-  position: absolute;
-  bottom: 0;
-  width: 100%;
 }
 
-/* OVERLAY DE TEXTO */
+/* Overlay que aparece al pasar el mouse */
 .card-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   background: rgba(0, 51, 102, 0.85);
   color: white;
   display: flex;
-  align-items: center;
   justify-content: center;
-  text-align: center;
+  align-items: center;
   opacity: 0;
-  transition: opacity 0.4s ease, transform 0.4s ease;
   padding: 1rem;
   font-size: 1rem;
   border-radius: 12px;
+  transition: opacity 0.4s, transform 0.4s;
 }
 
 .card-home:hover .card-overlay {
@@ -152,50 +146,48 @@
   transform: scale(1);
 }
 
-/* CANVAS */
+/* Badge verde para usuario */
+.user-badge {
+  margin: 10px auto 20px;
+  padding: 10px 20px;
+  background-color: #4caf50; /* verde */
+  color: white;
+  font-weight: 700;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(76,175,80,0.4);
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+}
+
+/* Canvas para gráficos */
 canvas {
   max-width: 600px;
-  max-height: 300px;
+  height: 250px !important;
   margin: auto;
   display: block;
   width: 100% !important;
-  height: 250px !important;
 }
 
-
-
-.texto-bienvenida{
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-}
-
-.row a {
-  display: inline-block;
-  width: 100%;
-  text-decoration: none;
-  color: inherit;
-}
-
-
-
-
-
-/* CARD PANEL SELECT (con efecto lift pero SIN texto overlay) */
+/* Tarjeta de selección (sin overlay) */
 .panel-select-card {
   border: 2px solid #003366;
   border-radius: 16px;
-  overflow: hidden;
-  background-color: #fff;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.08);
+  background: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.08);
   width: 100%;
   height: 400px;
   margin-bottom: 30px;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
 }
 
 .panel-select-card:hover {
   transform: scale(1.05);
-  box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 14px rgba(0,0,0,0.15);
 }
 
 .panel-select-card img {
@@ -216,63 +208,56 @@ canvas {
 /* Panel activo */
 .panel-select-card.active {
   border-color: #0d6efd;
-  box-shadow: 0px 0px 12px rgba(13, 110, 253, 0.5);
+  box-shadow: 0 0 12px rgba(13,110,253,0.5);
 }
 
-
-/* line-chart.component.css */
-
-.chart-wrapper {
-  width: 100%;
-  height: 500px; /* o lo que quieras de altura */
-  padding: 20px; 
-  box-sizing: border-box;
-}
+/* Wrapper para gráficos con flexbox centrado */
 .chart-wrapper {
   width: 100%;
   height: 500px;
   padding: 20px;
   box-sizing: border-box;
-  
-  display: flex;            /* Añadimos flexbox */
-  justify-content: center;  /* Centramos horizontalmente */
-  align-items: center;      /* (Opcional) Centramos también verticalmente si quieres */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Tarjetas con borde azul y espaciado */
 .CardsOperaciones {
-  border: 2px solid #003366;  /* Azul marino */
+  border: 2px solid #003366;
   padding: 20px;
   margin-bottom: 20px;
 }
 
-/* Animación */
+/* Animación simple de entrada */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Información de usuario */
 .user-info {
   font-size: 1rem;
   color: #333;
 }
 
+/* Tarjeta de autenticación */
 .card-auth {
-  background-color: rgba(255, 255, 255, 0.9);
+  background: rgba(255,255,255,0.9);
   padding: 30px 25px;
   border-radius: 12px;
-  width: 320px;
-  max-width: 90vw;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+  max-width: 320px;
   margin: 0 auto;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .card-auth h2 {
-  margin-bottom: 24px;
   font-weight: 700;
   font-size: 1.8rem;
+  margin-bottom: 24px;
   color: #2a2a2a;
   text-align: center;
 }
@@ -296,7 +281,7 @@ canvas {
   border-radius: 6px;
   border: 1.8px solid #ccc;
   font-size: 1rem;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s;
 }
 
 .card-auth input:focus {
@@ -305,16 +290,16 @@ canvas {
 }
 
 .card-auth button {
+  width: 100%;
   padding: 12px 0;
-  border: none;
   background-color: #4caf50;
   color: white;
+  font-weight: 700;
   border-radius: 8px;
   font-size: 1.1rem;
-  font-weight: 700;
+  border: none;
   cursor: pointer;
-  width: 100%;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
 
 .card-auth button:disabled {
@@ -326,79 +311,130 @@ canvas {
   background-color: #388e3c;
 }
 
+/* Flex container con espacio */
 .card-body.d-flex {
   display: flex;
-  gap: 2rem; /* espacio entre texto y gráfico */
+  gap: 2rem;
 }
 
+/* Texto de info con margen */
 .info-text p {
   margin-bottom: 0.5rem;
 }
 
+/* Contenedor para gráficos */
 .chart-container {
-  /* Opcional para ajustar tamaño */
   width: 100%;
 }
 
-.card-body.d-flex {
-  display: flex;
-  gap: 2rem; /* espacio entre texto y gráfico */
-}
-
-.info-text p {
-  margin-bottom: 0.5rem;
-}
-
-.chart-container {
-  /* Opcional para ajustar tamaño */
-  width: 100%;
-}
-
+/* Clases para ajustar padding/margin en columnas */
 .col-md-3.px-2 {
   padding-left: 10px !important;
   padding-right: 10px !important;
 }
 
-/* Estilo para quitar el borde */
+/* Clases para quitar bordes y espaciados */
 .sin-borde {
   border: none !important;
   padding: 0 !important;
   margin-bottom: 0 !important;
 }
 
+/* Tarjeta fija con fondo blanco translúcido y sombra */
 .info-card {
-  /* Otros estilos que ya tengas para info-card */
+  position: fixed;
+  bottom: -450px; /* oculta inicialmente abajo */
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1200px;
+  width: 90%;
+  background: rgba(255,255,255,0.95);
+  border-radius: 14px;
+  padding: 30px 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  overflow-y: auto;
+  max-height: 800px;
+  font-size: 0.85rem;
+  z-index: 10;
 }
 
-/* Quitar el borde del div que contiene el formulario de ubicación */
-.info-card.CardsOperaciones {
+/* Quita borde para ciertas combinaciones */
+.info-card.CardsOperaciones,
+.CardsOperaciones.text-center,
+.CardsOperaciones[ng-reflect-ng-if] {
   border: none !important;
+  padding: 0 !important;
+  margin-bottom: 0 !important;
 }
 
-/* Quitar el borde del div que contiene el gráfico */
-.CardsOperaciones.text-center {
-  border: none !important;
-  padding: 0 !important; /* También quitamos el padding si no lo necesitas */
-  margin-bottom: 0 !important; /* También quitamos el margen inferior si no lo necesitas */
-}
-
-/* Quitar el borde del div que contiene el texto de cálculo generado */
-.CardsOperaciones[ng-reflect-ng-if] { /* Selector para el div condicional */
-  border: none !important;
-  padding: 0 !important; /* También quitamos el padding si no lo necesitas */
-  margin-bottom: 0 !important; /* También quitamos el margen inferior si no lo necesitas */
-}
-
+/* Evita scroll horizontal */
 html, body {
   overflow-x: hidden;
+   font-family: 'Open Sans', Arial, sans-serif;
 }
 
+/* Elimina margenes laterales en filas */
 .row {
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
 
+/* Elimina padding lateral en columnas */
 .col-md-10, .col-md-6, .col-md-3 {
   padding-left: 0 !important;
   padding-right: 0 !important;
+}
+
+/* Titulos dentro de info-card */
+.info-card h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2a2a2a;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.info-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+  margin: 30px 0 15px;
+}
+
+/* Secciones con margen inferior */
+.info-section {
+  margin-bottom: 25px;
+}
+
+/* Texto dentro de secciones */
+.info-section p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+/* Botones verdes dentro de info-card */
+.info-card button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.info-card button:hover {
+  background-color: #388e3c;
+}
+
+/* Margen arriba para párrafos finales */
+.mt-3 {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
 }

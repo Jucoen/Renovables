@@ -64,7 +64,7 @@
 
 <div *ngIf="!cargando" class="row justify-content-center mt-4">
   <div class="col-md-8">
-    <div class="info-card text-center">
+    <div class="ubicacion-card text-center">
       <h2>Selecciona tu ubicación</h2>
       <div class="form-group">
         <label for="ubicacion" class="form-label d-block">Ubicación:</label>
@@ -101,7 +101,7 @@
   <p class="mt-3">Cargando datos, por favor espera...</p>
 </div>
 
-<div *ngIf="!cargando && mostrarResultados" class="row justify-content-center mt-5">
+<div *ngIf="!cargando && mostrarResultados" class="row justify-content-center mt-5"  #resultados>
   <div class="col-md-8">
     <div class="card p-4 card-no-hover">
       <div class="row align-items-center">
@@ -115,7 +115,7 @@
         </div>
 
         <div class="col-md-6">
-          <div class="info-card mt-4">
+          <div class="ubicacion-card mt-4">
             <h2>Cálculo de energía generada</h2>
             <p><strong>Potencia total:</strong> {{ potenciaTotalKW | number: '1.1-1' }} kW</p>
             <p><strong>Ubicación seleccionada:</strong> {{ ubicacionSeleccionada }}</p>

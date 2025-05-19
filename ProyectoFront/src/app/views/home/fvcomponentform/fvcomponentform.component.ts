@@ -3,6 +3,7 @@ import { DataService } from '../../../services/data.service';
 import { LineChartComponent } from '../../../line-chart/line-chart.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-fvcomponentform',
@@ -12,6 +13,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./fvcomponentform.component.css']
 })
 export class FVComponentFormComponent {
+  @ViewChild('resultados') resultadosRef!: ElementRef;
   latitud = 39.4487;
   longitud=  -0.4150;
   cantidad: number = 1;
@@ -52,47 +54,57 @@ export class FVComponentFormComponent {
     this.panelSeleccionadoIndex = index;
   }
 
-  calcularProduccion() {
-    if (this.latitud == null || this.longitud == null) {
-      this.error = 'Introduce latitud y longitud válidas';
-      return;
-    }
-    if (this.cantidad < 1) {
-      this.error = 'La cantidad debe ser al menos 1';
-      return;
-    }
-
-    this.cargando = true;
-    this.error = '';
-    this.irradiacionAnual = 0;
-    this.produccionAnual = 0;
-    this.rawResponse = null;
-
-    const potenciaKw = this.panelesDisponibles[this.panelSeleccionadoIndex].potencia * this.cantidad / 1000;
-
-    this.dataService.getPvgisData(this.latitud, this.longitud, potenciaKw).subscribe({
-      next: () => {
-        this.rawResponse = this.dataService.lastRaw;
-
-        const hourly = this.rawResponse?.outputs?.hourly || [];
-        const irradiacionTotalKWh = hourly.reduce((sum: number, hour: any) => {
-          return sum + ((hour['G(i)'] || 0) / 1000);
-        }, 0);
-
-        this.irradiacionAnual = irradiacionTotalKWh;
-        this.produccionAnual = irradiacionTotalKWh * potenciaKw * this.factorRendimientoTotal;
-
-        this.calcularEconomia();
-
-        this.cargando = false;
-      },
-      error: err => {
-        console.error('Error PVGIS:', err);
-        this.error = 'Error obteniendo datos PVGIS';
-        this.cargando = false;
-      }
-    });
+ 
+calcularProduccion() {
+  if (this.latitud == null || this.longitud == null) {
+    this.error = 'Introduce latitud y longitud válidas';
+    return;
   }
+  if (this.cantidad < 1) {
+    this.error = 'La cantidad debe ser al menos 1';
+    return;
+  }
+
+  this.cargando = true;
+  this.error = '';
+  this.irradiacionAnual = 0;
+  this.produccionAnual = 0;
+  this.rawResponse = null;
+  this.mostrarResultados = false;
+
+  const potenciaKw = this.panelesDisponibles[this.panelSeleccionadoIndex].potencia * this.cantidad / 1000;
+
+  this.dataService.getPvgisData(this.latitud, this.longitud, potenciaKw).subscribe({
+    next: () => {
+      this.rawResponse = this.dataService.lastRaw;
+
+      const hourly = this.rawResponse?.outputs?.hourly || [];
+      const irradiacionTotalKWh = hourly.reduce((sum: number, hour: any) => {
+        return sum + ((hour['G(i)'] || 0) / 1000);
+      }, 0);
+
+      this.irradiacionAnual = irradiacionTotalKWh;
+      this.produccionAnual = irradiacionTotalKWh * potenciaKw * this.factorRendimientoTotal;
+
+      this.calcularEconomia();
+      this.mostrarResultados = true;
+
+      // Delay para asegurar renderizado y luego hacer scroll
+      setTimeout(() => {
+        if (this.resultadosRef) {
+          this.resultadosRef.nativeElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+
+      this.cargando = false;
+    },
+    error: err => {
+      console.error('Error PVGIS:', err);
+      this.error = 'Error obteniendo datos PVGIS';
+      this.cargando = false;
+    }
+  });
+}
 
   calcularEconomia() {
     const panel = this.panelesDisponibles[this.panelSeleccionadoIndex];
@@ -113,3 +125,4 @@ export class FVComponentFormComponent {
     this.mostrarResultados = true;
   }
 }
+

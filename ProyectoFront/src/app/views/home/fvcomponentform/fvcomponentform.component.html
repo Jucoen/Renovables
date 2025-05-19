@@ -53,17 +53,20 @@
   </div>
 </div>
 
-  <div class="mb-3 card-paneles">
-    <label for="cantidad" class="form-label">Cantidad de paneles:</label>
-    <input
-      type="number"
-      id="cantidad"
-      class="form-control"
-      [(ngModel)]="cantidad"
-      name="cantidad"
-      min="1"
-    />
-  </div>
+<div class="mb-3 text-center">
+  <label for="cantidad" class="form-label d-block mx-auto" style="max-width: 300px;">
+    Cantidad de paneles:
+  </label>
+  <input
+    type="number"
+    id="cantidad"
+    class="form-control mx-auto text-center"
+    style="max-width: 250px;"
+    [(ngModel)]="cantidad"
+    name="cantidad"
+    min="1"
+  />
+</div>
 <button
   (click)="calcularProduccion()"
   [disabled]="cargando"
@@ -75,8 +78,7 @@
   <div *ngIf="error" style="color: red; margin-top: 1rem;">
     {{ error }}
   </div>
-
-<div class="card mt-4" *ngIf="mostrarResultados">
+<div class="card mt-4" *ngIf="mostrarResultados" #resultados>
   <div class="card-body d-flex justify-content-center align-items-center">
     <div class="info-text me-4 text-start" style="flex: 1; max-width: 400px;">
       <p><strong>Potencia total instalada:</strong> {{ panelesDisponibles[panelSeleccionadoIndex].potencia * cantidad }} W</p>

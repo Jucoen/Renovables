@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { DataService } from '../../../services/data.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -12,6 +12,8 @@ import { LineChartComponent } from "../../../line-chart/line-chart.component";
   styleUrl: './eolica.component.css'
 })
 export class EolicaComponent {
+  @ViewChild('resultados') resultadosRef!: ElementRef;
+
   velocidadViento: number = 0;
 
   turbinasDisponibles = [
@@ -114,6 +116,13 @@ export class EolicaComponent {
     this.inversionCalculada = inversion;
     this.ahorroAnualCalculado = this.totalAhorroAnualConDesgaste[0];
     this.gananciasTotales = this.totalAhorroAnualConDesgaste.reduce((a, b) => a + b, 0);
+
+    // Scroll al resultado
+    setTimeout(() => {
+      if (this.resultadosRef) {
+        this.resultadosRef.nativeElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
 
     // Consolas para depuración
     console.log('Velocidad del viento:', this.velocidadViento);
