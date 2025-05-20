@@ -5,19 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e74ec783-1432-412e-a0ce-ae70dbbb4ee4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.db_mysql/ddl_recovery.log" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/ddl_recovery.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.db_mysql/app_api_bbdd/user.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/app_api_bbdd/user.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.db_mysql/aria_log.00000001" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/aria_log.00000001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.db_mysql/aria_log_control" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/aria_log_control" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.db_mysql/ddl_recovery.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.db_mysql/ib_buffer_pool" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/ib_buffer_pool" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.db_mysql/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/ib_logfile0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.db_mysql/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/ibdata1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.db_mysql/ibtmp1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.db_mysql/mysql/innodb_index_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/mysql/innodb_index_stats.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.db_mysql/mysql/innodb_table_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/mysql/innodb_table_stats.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.db_mysql/tc.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.db_mysql/undo001" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/undo001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.db_mysql/undo002" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/undo002" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.db_mysql/undo003" beforeDir="false" afterPath="$PROJECT_DIR$/.db_mysql/undo003" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/src/app/app.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/components/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/src/app/components/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/views/home/eolica/eolica.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/src/app/views/home/eolica/eolica.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/views/home/eolica/eolica.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/src/app/views/home/eolica/eolica.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/views/home/fvcomponent/fvcomponent.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/src/app/views/home/fvcomponent/fvcomponent.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/views/home/fvcomponent/fvcomponent.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/src/app/views/home/fvcomponent/fvcomponent.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/views/home/fvcomponentform/fvcomponentform.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/src/app/views/home/fvcomponentform/fvcomponentform.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/views/home/fvcomponentform/fvcomponentform.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/src/app/views/home/fvcomponentform/fvcomponentform.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/app/views/home/fvcomponentform/fvcomponentform.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/src/app/views/home/fvcomponentform/fvcomponentform.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFront/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFront/src/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +201,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/proyecto/ProyectoJuanMiguel&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/PruebaFuncionalidadGit&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -215,7 +217,15 @@
     ]
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Docker.Api_Proyecto: Compose Deployment">
+    <configuration name="Api_Proyecto: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="Api_Proyecto/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name=".docker: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -226,6 +236,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.Api_Proyecto: Compose Deployment" />
         <item itemvalue="Docker..docker: Compose Deployment" />
       </list>
     </recent_temporary>
@@ -267,7 +278,8 @@
       <workItem from="1747517382826" duration="23000" />
       <workItem from="1747522359853" duration="3576000" />
       <workItem from="1747557994358" duration="20370000" />
-      <workItem from="1747675053981" duration="4350000" />
+      <workItem from="1747675053981" duration="4944000" />
+      <workItem from="1747692443589" duration="84000" />
     </task>
     <servers />
   </component>
